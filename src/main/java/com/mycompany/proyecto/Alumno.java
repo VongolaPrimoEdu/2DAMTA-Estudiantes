@@ -13,7 +13,7 @@ class Alumno implements Serializable {
     private String edad;
     private String matricula;
 
-    // Constructor sin parámetros
+    // Constructor sin parámetros (necesario para JAXB y serialización)
     public Alumno() {
     }
 
@@ -25,7 +25,7 @@ class Alumno implements Serializable {
         this.matricula = matricula;
     }
 
-    // Getters y Setters con anotaciones JAXB
+    // Getters y Setters con las anotaciones @XmlElement
     @XmlElement
     public String getNombre() {
         return nombre;
@@ -60,5 +60,9 @@ class Alumno implements Serializable {
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+    @Override
+    public String toString() {
+        return nombre + "," + apellidos + "," + edad + "," + matricula;
     }
 }

@@ -17,8 +17,8 @@ import java.io.ObjectOutputStream;
 public class CSVABinario {
  public static void main(String[] args) {
     
- try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/com/mycompany/pruebaconversionmaven/alumnos.csv")));
- FileOutputStream fos = new FileOutputStream("alumnos.bin");
+ try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/resources/alumno.csv")));
+ FileOutputStream fos = new FileOutputStream("alumnoscsv.bin");
  ObjectOutputStream oos = new ObjectOutputStream(fos)) {
  String linea;
  while ((linea = br.readLine()) != null) {

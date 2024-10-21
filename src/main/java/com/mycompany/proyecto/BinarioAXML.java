@@ -34,7 +34,7 @@ public class BinarioAXML {
 
             Alumnos alumnos;
 
-            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("alumno.bin"))) {
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("src/main/resources/alumno.bin"))) {
 
                 alumnos = (Alumnos) ois.readObject();
 
