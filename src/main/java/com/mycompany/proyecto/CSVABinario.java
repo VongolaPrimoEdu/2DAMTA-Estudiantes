@@ -8,6 +8,25 @@ package com.mycompany.proyecto;
  *
  * @author Eduardo
  */
+//Cambiar la ruta del buffered reader
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.ObjectOutputStream;
 public class CSVABinario {
+ public static void main(String[] args) {
     
+ try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/com/mycompany/pruebaconversionmaven/alumnos.csv")));
+ FileOutputStream fos = new FileOutputStream("alumnos.bin");
+ ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+ String linea;
+ while ((linea = br.readLine()) != null) {
+ oos.writeObject(linea);
+ }
+ System.out.println("Conversión de CSV a binario completada.");
+ } catch (Exception e) {
+ System.out.println("Error: " + e.getMessage());
+ }
+ }
 }
