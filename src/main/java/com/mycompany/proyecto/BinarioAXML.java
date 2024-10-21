@@ -34,7 +34,7 @@ public class BinarioAXML {
 
             Alumnos alumnos;
 
-            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("alumnos.bin"))) {
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("alumno.bin"))) {
 
                 alumnos = (Alumnos) ois.readObject();
 
@@ -54,7 +54,7 @@ public class BinarioAXML {
 
             // Escribir el objeto Alumnos en un nuevo archivo XML
 
-            marshaller.marshal(alumnos, new File("nuevoAlumnos.xml"));
+            marshaller.marshal(alumnos, new File("src/main/resources/nuevoAlumnos.xml"));
 
 
 

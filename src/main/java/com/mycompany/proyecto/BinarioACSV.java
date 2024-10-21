@@ -16,8 +16,8 @@ import java.io.EOFException;
 
 public class BinarioACSV {
     public static void main(String[] args) {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("alumnos.bin"));
-             PrintWriter pw = new PrintWriter(new FileOutputStream("nuevoAlumnos.csv"))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("src/main/resources/alumno.bin"));
+             PrintWriter pw = new PrintWriter(new FileOutputStream("src/main/resources/nuevoAlumnos.csv"))) {
              
             Object obj;
             while (true) { // Usamos un bucle infinito y manejamos la excepción para el fin del archivo

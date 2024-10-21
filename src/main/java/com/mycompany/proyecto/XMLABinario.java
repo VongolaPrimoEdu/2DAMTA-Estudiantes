@@ -42,13 +42,13 @@ public class XMLABinario {
 
             // Deserializar el archivo XML en un objeto Alumnos
 
-            Alumnos alumnos = (Alumnos) unmarshaller.unmarshal(new File("src/main/resources/alumnos.xml"));
+            Alumnos alumnos = (Alumnos) unmarshaller.unmarshal(new File("src/main/resources/alumno.xml"));
 
 
 
             // Serializar el objeto Alumnos en un archivo binario
 
-            try (FileOutputStream fos = new FileOutputStream("alumnos.bin");
+            try (FileOutputStream fos = new FileOutputStream("src/main/resources/alumno.bin");
 
                  ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 

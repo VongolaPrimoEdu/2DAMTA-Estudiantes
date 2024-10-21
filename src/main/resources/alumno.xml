@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alumnos>
+    <alumno>
+        <nombre>pepito</nombre>
+        <apellidos>perez</apellidos>
+        <edad>20</edad>
+        <matricula>123</matricula>
+    </alumno>
+</alumnos>

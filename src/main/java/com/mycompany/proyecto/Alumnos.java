@@ -18,27 +18,27 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 
 
-@XmlRootElement(name = "ventas")
+@XmlRootElement(name = "alumnos")
 
 public class Alumnos implements Serializable {
 
-    private List<Alumno> ventas;
+    private List<Alumno> alumnos;
 
 
 
-    @XmlElement(name = "venta")
+    @XmlElement(name = "alumno")
 
     public List<Alumno> getAlumnos() {
 
-        return ventas;
+        return alumnos;
 
     }
 
 
 
-    public void setAlumnos(List<Alumno> ventas) {
+    public void setAlumnos(List<Alumno> alumnos) {
 
-        this.ventas = ventas;
+        this.alumnos = alumnos;
 
     }
 
